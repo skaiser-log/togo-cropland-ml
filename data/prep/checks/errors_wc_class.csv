@@ -1,0 +1,11 @@
+label,wc_class,FN,FP,TN,TP
+crop,cropland,8,0,0,54
+crop,grassland,4,0,0,21
+crop,shrubland,5,0,0,13
+crop,tree cover,1,0,0,0
+non-crop,built-up,0,0,1,0
+non-crop,cropland,0,7,2,0
+non-crop,grassland,0,11,30,0
+non-crop,shrubland,0,11,49,0
+non-crop,tree cover,0,9,78,0
+non-crop,water,0,0,2,0

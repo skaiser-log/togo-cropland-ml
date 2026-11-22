@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Pipeline outputs: only the small results in data/prep are tracked
+/data/**
+!/data/**/
+!/data/prep/labels.gpkg
+!/data/prep/regions.gpkg
+!/data/prep/samples.parquet
+!/data/prep/test_predictions.parquet
+!/data/prep/test_predictions_F.parquet
+!/data/prep/test_errors.parquet
+!/data/prep/checks/*.csv
+!/data/prep/checks/*.json
+!/data/prep/checks/*.txt
+!/data/prep/checks/map_*.png
+!/data/prep/checks/season_profiles.png

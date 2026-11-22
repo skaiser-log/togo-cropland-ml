@@ -1,0 +1,7 @@
+pattern,crop,non-crop,All
+all right,37,135,172
+all wrong,4,3,7
+mixed,33,44,77
+"models right, WC wrong",31,1,32
+"models wrong, WC right",1,17,18
+All,106,200,306

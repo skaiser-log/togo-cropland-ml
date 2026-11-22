@@ -1,0 +1,12 @@
+{
+  "water_share": 0.503,
+  "purity_as_stored": 0.969,
+  "purity_flipped": 0.589,
+  "passed": true,
+  "tile": "s3://us-west-2.opendata.source.coop/tge-labs/aef/v1/annual/2019/31N/xarbqmkb3bg98l5hb-0000000000-0000008192.tiff",
+  "centre": [
+    1.43,
+    7.45
+  ],
+  "window_px": 600
+}
