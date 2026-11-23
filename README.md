@@ -26,7 +26,9 @@ three-person-labelled test points once.
 | ESA WorldCover 2021 | 0.70 | 0.83 | 0.87 | 0.58 |
 | Digital Earth Africa crop mask 2019 | 0.71 | 0.81 | 0.75 | 0.67 |
 
-Only OlmoEarth beats the full season (exact McNemar p = 0.03). Its gain is fewer false alarms, 23 against 41.
+OlmoEarth scored highest. Against the full season the exact McNemar test gives p = 0.03, or 0.10 after correcting
+for three embeddings, so the gain is not significant after correction. Its main gain is fewer false alarms, 23
+against 41.
 WorldCover raises only 9 but misses 44 crop points against OlmoEarth's 19, and the gap between the two is not
 significant (p = 0.22). Error-adjusted cropland (Olofsson et al. 2014) is 69 % of Savanes (5 980 ± 1 030 km²)
 and 36 % of Plateaux (6 270 ± 1 040 km²). Maritime has too few training labels: the models call 63 % of its
@@ -35,12 +37,17 @@ test points crop where 27 % are.
 OlmoEarth was added after the test of sets A to E, with the setting fixed before it existed, and is reported as a
 later addition.
 
+None of the 306 test points lies inside a WorldCereal reference polygon, although 1 274 of the 1 276 training
+polygons are in that repository. In a leave-one-region-out check OlmoEarth keeps its lead on the 960 polygons
+WorldCereal did not select (F1 0.89 against 0.86 for TESSERA). Pretraining on global maps is a plausible cause of
+the lead, which this project did not test directly.
+
 ![Set F cropland in Plateaux](data/prep/checks/map_Plateaux_f.png)
 
 ## Repository layout
 
 ```
-pipeline/     the scripts s00 to s17, shared helpers (common.py) and tests
+pipeline/     the scripts s00 to s17, the checks x07 and x10, shared helpers (common.py) and tests
 notebooks/    walkthrough.ipynb, executed, with outputs
 data/prep/    labels, the sample table, test predictions and every result table (checks/)
 docs/         the poster
@@ -85,6 +92,7 @@ Then, from `pipeline/`:
 | One-time test | `python s12_test.py`, `python s16_olmoearth.py` | 2 min |
 | Regional maps | `python s13_maps.py`, `python s17_maps_f.py` | about 2 h, network bound |
 | Areas, error analysis | `python s14_areas.py`, `python s15_errors.py` | 2 min |
+| Checks on OlmoEarth's lead | `python x07_why_olmoearth.py`, `python x10_worldcereal_overlap.py` (needs the WorldCereal reference polygons for Togo, not included) | about 30 min |
 | Tests | `python -m pytest` (`-m remote` re-reads source data) | seconds |
 
 Extraction scripts skip finished items, so an interrupted run is simply restarted. In a fresh clone the tests
