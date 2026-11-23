@@ -106,13 +106,19 @@ that need the feature tables or maps are skipped until those exist.
 | Region borders | geoBoundaries, Togo ADM1 | CC BY 4.0 |
 | Sentinel-2 L2A, Sentinel-1 RTC | Copernicus, via Microsoft Planetary Computer | Copernicus data terms; Sentinel-1 RTC CC BY 4.0 |
 | AlphaEarth Foundations annual 2019 | Google DeepMind, via Source Cooperative | CC BY 4.0 |
-| TESSERA v1.1, 2019 | University of Cambridge, via `geotessera` | see the TESSERA terms |
-| OlmoEarth v1.3 annual 2019 | Ai2, via Source Cooperative | OlmoEarth Artifact License |
+| TESSERA v1.1, 2019 | University of Cambridge, via `geotessera` | CC0 per the [project terms](https://github.com/ucam-eo/tessera/blob/master/aup.md) (the AWS listing says CC-BY-SA) |
+| OlmoEarth v1.3 annual 2019 | Allen Institute for AI (Ai2), via Source Cooperative | [OlmoEarth Artifact License](https://source.coop/olmoearth/olmoearth-v1-3-embeddings/LICENSE.txt) |
 | ESA WorldCover 2020 and 2021 | ESA, via Planetary Computer | CC BY 4.0 |
 | Crop mask 2019 | Digital Earth Africa | CC BY 4.0 |
 
 `data/prep/` holds the labels in the project grid (derived from Kerner et al. 2020) and model outputs. No raw
 imagery or embedding values are included.
+
+Outputs derived from OlmoEarth are provided under the
+[OlmoEarth Artifact License](https://source.coop/olmoearth/olmoearth-v1-3-embeddings/LICENSE.txt). They may not be
+used for military or defence-related purposes, including weapons development, intelligence gathering, surveillance
+or policing, or for extractive activities such as mining, drilling or deforestation. Source: Allen Institute for AI
+(Ai2).
 
 ## References
 
@@ -123,4 +129,4 @@ imagery or embedding values are included.
 - Digital Earth Africa (2019). Cropland extent map (crop mask) for Africa.
 - Brown, C. F. et al. (2025). AlphaEarth Foundations. arXiv 2507.22291.
 - Feng, Z. et al. (2025). TESSERA. arXiv 2506.20380.
-- OlmoEarth Team (2026). OlmoEarth. arXiv 2610.32294.
+- OlmoEarth Team, Ai2 (2026). OlmoEarth. arXiv 2610.32294.
